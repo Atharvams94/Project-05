@@ -14,13 +14,6 @@ fft_result = fft(data)
 print(np.abs(fft_result))
 
 def analyze_data(data_file, algorithm="default"):
-  """
-  Analyzes data from a file using a specified algorithm.
-
-  Args:
-    raise ValueError(f"Unsupported algorithm: {algorithm}")
-
-  return results
 
 # Example usage
 data_path = "data.txt"  # Replace with your actual data file path
