@@ -69,17 +69,3 @@ class WeatherFetcher:
         except Exception as e:
             print(f"Error fetching weather data for {city}: {e}")
 
-async def main():
-    api_key = 'your_openweathermap_api_key'  # Replace with your actual API key
-    cities = ['London', 'New York', 'Tokyo', 'Sydney']
-
-    weather_fetcher = WeatherFetcher(api_key)
-    tasks = [weather_fetcher.get_and_save_weather(city) for city in cities]
-    await asyncio.gather(*tasks)
-
-if __name__ == "__main__":
-    asyncio.run(main())
-
-  for key, value in analysis_results.items():
-    print(f"{key}: {value}")
-
