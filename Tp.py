@@ -4,23 +4,6 @@ def fft(data):
 
   return np.fft.fft(data)
 
-# Sample data
-data = np.random.rand(100)
-
-# Calculate FFT
-fft_result = fft(data)
-
-# Print the magnitude of the frequency spectrum (absolute values)
-print(np.abs(fft_result))
-
-def analyze_data(data_file, algorithm="default"):
-
-# Example usage
-data_path = "data.txt"  # Replace with your actual data file path
-analysis_results = analyze_data(data_path, algorithm="advanced")
-
-if analysis_results:
-  print("Analysis Results:")
   
   import aiohttp
 import aiofiles
