@@ -30,11 +30,7 @@ class WeatherFetcher:
                 else:
                     response.raise_for_status()
 
-    async def save_weather_data(self, city, data):
-        filename = f"{city}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-        async with aiofiles.open(filename, 'w') as file:
-            await file.write(json.dumps(data, indent=4))
-        print(f"Weather data saved to {filename}")
+  
 
     def parse_weather_data(self, data):
         weather_desc = data['weather'][0]['description']
