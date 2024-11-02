@@ -2,15 +2,6 @@ import numpy as np
 
 def fft(data):
 data_file, algorithm="default"):
- 
-
-  # Read data from file
-  try:
-    with open(data_file, 'r') as f:
-      data = f.readlines()
-  except FileNotFoundError:
-    print(f"Error: File {data_file} not found.")
-    return None
 
   # Preprocess data (remove empty lines, convert to floats)
   data = [float(line.strip()) for line in data if line.strip()]
